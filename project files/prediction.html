@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction - HematoVision</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to right, #ffe0e9, #ffdde1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 18px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+            text-align: center;
+            max-width: 500px;
+        }
+
+        h2 {
+            color: #d43f8d;
+        }
+
+        img {
+            max-width: 100%;
+            border: 5px solid #d43f8d;
+            border-radius: 12px;
+            margin-top: 20px;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 30px;
+            text-decoration: none;
+            background: #d43f8d;
+            color: white;
+            padding: 10px 25px;
+            border-radius: 25px;
+        }
+
+        a:hover {
+            background: #b02e70;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>🧬 Predicted Blood Cell Type:</h2>
+        <h2><strong>{{ prediction }}</strong></h2>
+        <img src="{{ url_for('static', filename='uploads/' + img_path) }}" alt="Uploaded Image">
+        <br>
+        <a href="/">🔁 Try Another</a>
+        <a href="/logout">🚪 Exit</a>
+    </div>
+</body>
+</html>
